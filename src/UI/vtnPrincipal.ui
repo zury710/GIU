@@ -26,7 +26,6 @@
     <property name="font">
      <font>
       <pointsize>14</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -46,7 +45,6 @@
     <property name="font">
      <font>
       <pointsize>14</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -66,7 +64,6 @@
     <property name="font">
      <font>
       <pointsize>14</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -77,11 +74,14 @@
    <widget class="QLineEdit" name="txtNombre">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>210</x>
       <y>30</y>
-      <width>221</width>
+      <width>301</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="maxLength">
+     <number>50</number>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtApellido">
@@ -89,9 +89,12 @@
      <rect>
       <x>210</x>
       <y>90</y>
-      <width>221</width>
+      <width>301</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="maxLength">
+     <number>50</number>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtCedula">
@@ -99,16 +102,22 @@
      <rect>
       <x>210</x>
       <y>150</y>
-      <width>221</width>
+      <width>301</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>10</number>
     </property>
    </widget>
    <widget class="QPushButton" name="btnGuardar">
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>240</y>
+      <y>340</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -116,7 +125,6 @@
     <property name="font">
      <font>
       <pointsize>12</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -128,7 +136,7 @@
     <property name="geometry">
      <rect>
       <x>420</x>
-      <y>240</y>
+      <y>340</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -136,12 +144,85 @@
     <property name="font">
      <font>
       <pointsize>12</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="text">
      <string>Borrar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbCedula_3">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>230</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Email</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="cbSexo">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>230</y>
+      <width>301</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cbSexo_2">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>190</y>
+      <width>221</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Mujer</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Hombre</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="lbCedula_2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>190</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Sexo</string>
     </property>
    </widget>
   </widget>
@@ -151,7 +232,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>33</height>
     </rect>
    </property>
   </widget>
