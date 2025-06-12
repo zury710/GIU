@@ -170,7 +170,7 @@
      <string>Email</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="cbSexo">
+   <widget class="QLineEdit" name="txtEmail">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -186,7 +186,7 @@
      <number>100</number>
     </property>
    </widget>
-   <widget class="QComboBox" name="cbSexo_2">
+   <widget class="QComboBox" name="cbSexo">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -195,6 +195,11 @@
       <height>24</height>
      </rect>
     </property>
+    <item>
+     <property name="text">
+      <string>Seleccionar</string>
+     </property>
+    </item>
     <item>
      <property name="text">
       <string>Mujer</string>
