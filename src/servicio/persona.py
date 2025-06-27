@@ -1,6 +1,8 @@
 from PySide6.QtGui import QIntValidator
 from PySide6.QtWidgets import QMainWindow, QMessageBox
 from src.UI.vtnPrincipal import Ui_vtnPrincipal
+from src.dominio.persona import Persona
+
 
 class PersonaServicio(QMainWindow):
     def __init__(self):
@@ -38,6 +40,11 @@ class PersonaServicio(QMainWindow):
         print(self.ui.txtEmail.text())
         print(self.ui.cbSexo.currentText())
         print('Se hizo clic en el botón guardar')
+        persona = Persona(nombre=self.ui.txtNombre.text(),
+                          apellido=self.ui.txtApellido.text(),
+                          cedula=self.ui.txtCedula.text(),
+                          sexo=self.ui.cbSexo.currentText(),)
+        print(persona)
 
         # Limpiar campos sin mostrar mensaje de borrar
         self.borrar()
