@@ -1,6 +1,7 @@
 from PySide6.QtGui import QIntValidator
 from PySide6.QtWidgets import QMainWindow, QMessageBox
 from src.UI.vtnPrincipal import Ui_vtnPrincipal
+from src.datos.personaDao import PersonaDao
 from src.dominio.persona import Persona
 
 
@@ -22,8 +23,8 @@ class PersonaServicio(QMainWindow):
             self.ui.txtApellido.text() == "" or
             self.ui.txtCedula.text() == "" or
             self.ui.txtEmail.text() == "" or
-            self.ui.cbSexo.currentText() not in ["Masculino", "Femenino"]):
-            QMessageBox.information(self, "Advertencia", "Ingrese todos los datos.")
+            self.ui.cbSexo.currentText() not in ["Hombre", "Mujer"]):
+            QMessageBox.warning(self, "Advertencia", "Ingrese todos los datos.")
             return
 
         if len(self.ui.txtCedula.text()) != 10:
@@ -43,8 +44,9 @@ class PersonaServicio(QMainWindow):
         persona = Persona(nombre=self.ui.txtNombre.text(),
                           apellido=self.ui.txtApellido.text(),
                           cedula=self.ui.txtCedula.text(),
-                          sexo=self.ui.cbSexo.currentText(),)
+                          sexo=self.ui.cbSexo.currentText()[0])
         print(persona)
+        PersonaDao.insertar_persona(persona)
 
         # Limpiar campos sin mostrar mensaje de borrar
         self.borrar()
